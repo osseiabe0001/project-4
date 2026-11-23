@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingredient Scale Calculator | Abenas Sizziling Kitchen</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="calculator-page">
+    <header class="site-header">
+        <a href="index.html">Abenas Sizziling Kitchen</a>
+        <nav aria-label="Main navigation">
+            <a href="food.html" id="recipes-link">Recipes</a>
+            <a href="Calculator.html">Ingredient calculator</a>
+            <a href="minigame.html">Kitchen mini game</a>
+            <a href="dinnerdash.html">Dinner Dash</a>
+            <a href="quiz.html">Quiz</a>
+        </nav>
+    </header>
+    <header class="page-header">
+        <h1>Ingredient Scale &amp; Multiplier Lab</h1>
+        <p>Adjust the servings to scale the ingredients you selected on the Recipes page.</p>
+    </header>
+    <main class="calculator-card">
+        <form id="scale-form">
+            <div class="input-box">
+                <label for="servings">How many people are you cooking for?</label>
+                <input id="servings" name="servings" type="number" min="1" max="100" step="1" value="4" required>
+                <p class="base-servings">Original recipe serves 4.</p>
+            </div>
+            <button id="calculate-btn" type="submit">Scale recipe</button>
+        </form>
+
+        <section class="results" aria-labelledby="results-title" aria-live="polite">
+            <h2 id="results-title">Selected ingredients</h2>
+            <p id="scale-summary">Quantities for 4 people</p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Ingredient</th>
+                            <th scope="col">Scaled amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ingredient-amounts"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

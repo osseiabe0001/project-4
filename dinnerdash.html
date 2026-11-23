@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinner Dash | Abenas Sizziling Kitchen</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script2.js" defer></script>
+</head>
+<body class="dinnerdash-page">
+    <header class="site-header">
+        <a href="index.html">Abenas Sizziling Kitchen</a>
+        <nav aria-label="Main navigation">
+            <a href="food.html">Recipes</a>
+            <a id="calculator-link" href="Calculator.html">Ingredient calculator</a>
+            <a href="minigame.html">Kitchen mini game</a>
+            <a href="dinnerdash.html">Dinner Dash</a>
+            <a href="quiz.html">Quiz</a>
+        </nav>
+    </header>
+    <main class="game-shell">
+        <div class="eyebrow">KITCHEN ARCADE</div>
+        <h1 id="game-title">Dinner Dash</h1>
+        <p class="intro">Keep the soufflé safe and handle every kitchen emergency!</p>
+
+        <section class="game-board" aria-label="Dinner Dash game">
+            <div class="order-ticket">
+                <div>
+                    <span class="ticket-label">ORDER TICKET</span>
+                    <h2 id="order-title">Order #42: Fluffy Soufflé</h2>
+                </div>
+                <div class="chef-chip">
+                    <img id="chef-avatar" alt="">
+                    <span id="chef-name">Your chef</span>
+                    <small id="chef-perk"></small>
+                </div>
+                <span id="order-status" class="baking-status">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    STATUS: BAKING
+                </span>
+            </div>
+
+            <div id="emergency-panel" class="emergency-panel" hidden>
+                <span class="emergency-icon" aria-hidden="true">!</span>
+                <div>
+                    <p class="emergency-label">KITCHEN EMERGENCY</p>
+                    <h2 id="emergency-title"></h2>
+                    <p id="emergency-instruction"></p>
+                </div>
+                <span class="emergency-countdown"><span id="emergency-timer">0</span>s</span>
+            </div>
+
+            <div id="kitchen-counter" class="kitchen-counter normal-temp">
+                <div id="burn-warning" class="burn-warning" aria-hidden="true">Careful, Chef! The soufflé is burning!</div>
+                <span class="timer-label">TIME LEFT</span>
+                <div id="timer" class="timer">45</div>
+                <p id="kitchen-status" class="kitchen-status">Kitchen is getting ready.</p>
+            </div>
+
+            <div class="progress-label">
+                Soufflé flips: <span id="flip-progress">0/5</span>
+                <span aria-hidden="true">·</span>
+                Emergencies handled: <span id="emergency-progress">0/0</span>
+                <span id="combo-display" class="combo-display">Combo x0</span>
+            </div>
+            <p class="score">Score: <span id="score">0</span></p>
+
+            <section class="stations" aria-label="Kitchen stations">
+                <div class="section-heading">
+                    <h2>Kitchen stations</h2>
+                    <span>CHECK BEFORE SERVICE</span>
+                </div>
+                <div id="station-list" class="station-list"></div>
+            </section>
+
+            <div class="actions" aria-label="Cooking actions">
+                <button id="flip-btn" class="action-button" type="button">
+                    <span aria-hidden="true">↻</span>
+                    Flip Item
+                    <small>Keep the soufflé rising</small>
+                </button>
+                <button id="heat-btn" class="action-button" type="button">
+                    <span aria-hidden="true">♨</span>
+                    Adjust Heat
+                    <small>Balance the oven</small>
+                </button>
+                <button id="fan-btn" class="action-button emergency-button" type="button">
+                    <span aria-hidden="true">✦</span>
+                    Emergency Fan
+                    <small>Clear the kitchen</small>
+                </button>
+            </div>
+
+            <p id="game-message" class="game-message" aria-live="polite">Get ready, Chef!</p>
+            <button id="restart-btn" class="restart-button" type="button" hidden>Play again</button>
+        </section>
+    </main>
+</body>
+</html>

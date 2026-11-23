@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingredient Catch | Abenas Sizziling Kitchen</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="minigame-page">
+    <header class="site-header">
+        <a href="index.html">Abenas Sizziling Kitchen</a>
+        <nav aria-label="Main navigation">
+            <a href="food.html">Recipes</a>
+            <a href="Calculator.html">Ingredient calculator</a>
+            <a href="minigame.html">Kitchen mini game</a>
+            <a href="dinnerdash.html">Dinner Dash</a>
+            <a href="quiz.html">Quiz</a>
+        </nav>
+    </header>
+    <main class="game-shell">
+        <h1 id="game-title">Ingredient Catch</h1>
+        <p class="intro">Catch ingredients. Avoid the flames!</p>
+
+        <section id="catch-game" class="catch-game" aria-label="Ingredient catching game">
+            <div class="game-info">
+                <span id="chef-name">Your chef</span>
+                <span>Score: <strong id="score">0</strong></span>
+                <span>Lives: <strong id="lives">♥ ♥ ♥</strong></span>
+                <span>Time: <strong id="timer">45</strong></span>
+            </div>
+            <div id="catch-field" class="catch-field" aria-label="Game field">
+                <div id="falling-items" class="falling-items"></div>
+                <div id="catcher" class="catcher" aria-label="Your chef">
+                    <img id="catcher-avatar" alt="">
+                </div>
+                <div id="game-overlay" class="game-overlay">
+                    <h2 id="overlay-title">Ready?</h2>
+                    <p id="overlay-message">Move left and right to catch ingredients and avoid flames.</p>
+                    <button id="start-game-btn" class="start-game-button" type="button">Start game</button>
+                </div>
+            </div>
+            <div class="catch-controls" aria-label="Movement controls">
+                <button id="move-left" class="move-button" type="button" aria-label="Move left">←</button>
+                <span id="game-message" aria-live="polite">Use the arrow keys or buttons.</span>
+                <button id="move-right" class="move-button" type="button" aria-label="Move right">→</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
